@@ -1,0 +1,20 @@
+/*
+ * Atelier Cave Dark Color Palette
+ */
+
+@define-color bg0   #19171c;
+@define-color bg1   #1b1920;
+@define-color bg2   #26232a;
+@define-color bg3   #2a2730;
+@define-color bg4   #655f6d;
+
+@define-color fg    #e0d8c7;
+@define-color fg1   #d9d0c1;
+@define-color fg2   #c8c0b2;
+
+@define-color blue      #c4a7e7;
+@define-color cyan      #90c5a9;
+@define-color green     #7c9d6e;
+@define-color yellow    #d9b27c;
+@define-color red       #be4678;
+@define-color purple    #8b7fc2;

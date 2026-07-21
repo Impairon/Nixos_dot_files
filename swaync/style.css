@@ -1,0 +1,309 @@
+/* ─── Atelier Cave Dark – SwayNC theme ────────────── */
+
+* {
+    font-family: "0xProto Nerd Font", "JetBrainsMono Nerd Font", monospace;
+    transition:
+        background-color 150ms ease,
+        color 150ms ease,
+        border-color 150ms ease,
+        box-shadow 150ms ease;
+}
+
+/* ─── Control center ─── */
+.control-center {
+    background: rgba(25, 23, 28, 0.88);
+    border-radius: 16px;
+    border: 1px solid rgba(196, 167, 231, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+}
+
+.control-center-list {
+    padding: 4px;
+}
+
+.control-center-list-placeholder {
+    color: #655f6d;
+}
+
+/* ─── Title bar ─── */
+.widget-title {
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #d9b27c;
+}
+
+.widget-title > button {
+    color: #e0d8c7;
+    background: #19171c;
+    border: 1px solid #c4a7e7;
+    border-radius: 8px;
+    padding: 4px 10px;
+}
+
+.widget-title > button:hover {
+    background: #c4a7e7;
+    color: #19171c;
+}
+
+.widget-title > button:active {
+    background: #a888d4;
+    color: #19171c;
+}
+
+/* ─── Do Not Disturb toggle ─── */
+.widget-dnd {
+    margin: 8px 10px;
+    color: #e0d8c7;
+    font-size: 1rem;
+}
+
+.widget-dnd > switch {
+    background: #26232a;
+    border: 1px solid #655f6d;
+    border-radius: 9999px;
+}
+
+.widget-dnd > switch:checked {
+    background: #c4a7e7;
+    border-color: #c4a7e7;
+}
+
+/* Fix: 100% caused rendering artifacts in GTK CSS; 9999px gives a proper pill */
+.widget-dnd > switch slider {
+    background: #e0d8c7;
+    border-radius: 9999px;
+    min-height: 18px;
+    min-width: 18px;
+}
+
+/* ─── Menubar widget container ─── */
+/* Fix: original used .menubar which never matched; swaync wraps in .widget-menubar */
+.widget-menubar {
+    margin: 6px 10px;
+}
+
+/* ─── Power button ─── */
+.widget-menubar > box > button#power,
+.widget-menubar button#power {
+    width: 100%;
+    min-width: 100%;
+    padding: 14px 0;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #f28fad;
+    background: rgba(190, 70, 120, 0.12);
+    border-radius: 10px;
+    border: 1px solid rgba(190, 70, 120, 0.45);
+}
+
+.widget-menubar > box > button#power:hover,
+.widget-menubar button#power:hover {
+    background: #be4678;
+    color: #f4efe8;
+    border-color: #be4678;
+    box-shadow: 0 0 12px rgba(190, 70, 120, 0.45);
+}
+
+.widget-menubar > box > button#power:active,
+.widget-menubar button#power:active {
+    background: #9c3560;
+    color: #f4efe8;
+    border-color: #9c3560;
+    box-shadow: none;
+}
+
+/* ─── Volume / Backlight labels ─── */
+.widget-volume,
+.widget-backlight {
+    margin: 8px 10px;
+    color: #e0d8c7;
+}
+
+/* ─── Per-app volume rows ─── */
+.per-app-volume {
+    margin: 2px 0;
+    border-radius: 8px;
+    padding: 2px 4px;
+}
+
+.per-app-volume .app-label {
+    color: #b3afc8;
+    font-size: 0.9rem;
+    min-width: 90px;
+}
+
+/* ─── Sliders (Backlight & Volume) ─── */
+.widget-backlight > scale trough,
+.widget-volume > scale trough {
+    background-color: #3a3542;
+    border-radius: 9999px;
+    min-height: 6px;
+}
+
+.widget-backlight > scale highlight,
+.widget-volume > scale highlight {
+    background-color: #c4a7e7;
+    border-radius: 9999px;
+}
+
+.widget-backlight > scale slider,
+.widget-volume > scale slider {
+    background-color: #e0d8c7;
+    border-radius: 9999px;
+    min-height: 16px;
+    min-width: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.widget-backlight > scale slider:hover,
+.widget-volume > scale slider:hover {
+    background-color: #c4a7e7;
+}
+
+/* ─── Notification popups ─── */
+.notification-window {
+    margin: 6px;
+}
+
+.notification {
+    background: #26232a;
+    border: 1px solid rgba(196, 167, 231, 0.3);
+    border-radius: 12px;
+    margin: 4px 0;
+}
+
+.notification.critical {
+    border-color: #be4678;
+    box-shadow: 0 0 8px rgba(190, 70, 120, 0.4);
+}
+
+.notification-content {
+    padding: 10px 12px;
+}
+
+.notification-group {
+    background: rgba(38, 35, 42, 0.6);
+    border-radius: 12px;
+    margin: 4px 0;
+}
+
+.notification-group-headers {
+    color: #655f6d;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+}
+
+.notification-group-collapse-button,
+.notification-group-collapse-button:hover {
+    color: #655f6d;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+
+.notification-group-collapse-button:hover {
+    color: #c4a7e7;
+}
+
+.summary {
+    color: #d9b27c;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.body {
+    color: #e0d8c7;
+    font-size: 14px;
+}
+
+.time {
+    color: #655f6d;
+    font-size: 13px;
+}
+
+.notification-action,
+.notification-default-action {
+    background: #19171c;
+    color: #e0d8c7;
+    border: 1px solid #3a3542;
+    border-radius: 6px;
+    margin: 4px;
+    padding: 6px 10px;
+}
+
+.notification-action:hover,
+.notification-default-action:hover {
+    background: #c4a7e7;
+    color: #19171c;
+    border-color: #c4a7e7;
+}
+
+.notification-action:active,
+.notification-default-action:active {
+    background: #a888d4;
+    color: #19171c;
+}
+
+/* ─── Close button ─── */
+.close-button {
+    color: #be4678;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 6px;
+}
+
+.close-button:hover {
+    background: #be4678;
+    color: #f4efe8;
+}
+
+.close-button:active {
+    background: #9c3560;
+    color: #f4efe8;
+}
+
+/* ─── Generic menus ─── */
+.menu {
+    min-width: 260px;
+    background: #26232a;
+    border: 1px solid #655f6d;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.menu button {
+    min-width: 100%;
+    color: #e0d8c7;
+    background: transparent;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+.menu button:hover {
+    background: #c4a7e7;
+    color: #19171c;
+}
+
+.menu button:active {
+    background: #a888d4;
+    color: #19171c;
+}
+
+/* ─── Scrollbar ─── */
+scrollbar {
+    background: transparent;
+}
+
+scrollbar slider {
+    background-color: #3a3542;
+    border-radius: 9999px;
+    min-width: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: #c4a7e7;
+}

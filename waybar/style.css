@@ -1,0 +1,214 @@
+/*
+ * Atelier Cave Dark Theme for Waybar
+ * Rounded, solid, flicker-minimized
+ */
+
+* {
+    font-family: "0xProto Nerd Font", monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #19171c;
+    color: #e0d8c7;
+    border-radius: 15px;
+    opacity: 1;
+    border: 1px solid #c4a7e7;
+    margin: 6px;
+}
+
+#custom-nix-updates {
+    margin-right: 10px;
+}
+#custom-nix-updates.has-updates {
+    color: #d9b27c; /* gold */
+}
+#custom-nix-updates.up-to-date {
+    color: #90c5a9; /* teal */
+}
+#language {
+    color: #c4a7e7;
+    padding: 0 7px;
+    font-weight: bold;
+}
+
+#language:hover {
+    color: #d9b27c;
+}
+.modules-left,
+.modules-center,
+.modules-right,
+#workspaces,
+#clock,
+#clock#right,
+#pulseaudio,
+#network,
+#battery,
+#tray,
+#custom-cpucat {
+    background-color: #19171c;
+}
+
+#workspaces {
+    min-width: 60px;
+    padding: 2px 4px;
+    margin: 8px 0;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    background-color: #655f6d;
+    color: transparent;
+    padding: 6px 5px;
+    border-radius: 99px;
+    margin: 0 2px;
+    min-width: 4px;
+    transition:
+        background-color 120ms ease,
+        color 120ms ease;
+}
+
+#workspaces button:hover {
+    background-color: #8b7fc2;
+}
+
+#workspaces button.active {
+    background-color: #c4a7e7;
+    min-width: 1.2rem;
+}
+
+#clock,
+#clock#right {
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 1.12rem;
+    color: #d9b27c;
+}
+
+#clock#right {
+    color: #e0d8c7;
+    font-weight: normal;
+}
+
+.modules-left {
+    margin-left: 12px;
+}
+
+.modules-right {
+    margin-right: 12px;
+}
+
+#pulseaudio {
+    color: #c4a7e7;
+    margin: 0 4px;
+}
+
+#pulseaudio.muted {
+    color: #655f6d;
+}
+
+#network {
+    color: #8b7fc2;
+    margin: 0 4px;
+}
+
+#network.disconnected {
+    color: #be4678;
+}
+
+#network:hover {
+    color: #c4a7e7;
+}
+
+#battery {
+    color: #8b7fc2;
+    margin: 0 4px;
+}
+
+#battery.warning {
+    color: #d9b27c;
+}
+
+#battery.critical {
+    color: #be4678;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #c4a7e7;
+}
+
+#custom-power {
+    color: #be4678; /* red accent */
+    font-size: 1.2em;
+    margin: 0 4px;
+}
+
+#custom-power:hover {
+    color: #c4a7e7; /* purple on hover */
+}
+
+#cpu {
+    color: #c4a7e7; /* your purple accent */
+    margin: 0 4px;
+}
+
+#custom-cpucat {
+    font-family: "Waycat", monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c4a7e7;
+    padding: 0 8px;
+    min-width: 48px;
+}
+
+#tray {
+    margin: 0 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#tray menu {
+    background-color: #19171c;
+    color: #e0d8c7;
+    border: 1px solid #c4a7e7;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#tray menu menuitem {
+    background-color: #19171c;
+    color: #e0d8c7;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+#tray menu menuitem:hover {
+    background-color: #26232a;
+    color: #c4a7e7;
+}
+
+#tray menu separator {
+    background-color: #26232a;
+    margin: 2px 8px;
+}
+
+tooltip {
+    background-color: #19171c;
+    border: 1px solid #c4a7e7;
+    border-radius: 12px;
+    color: #e0d8c7;
+}
+
+tooltip label {
+    color: #e0d8c7;
+}

@@ -1,0 +1,5 @@
+# 1. Update the lock file (gets latest unstable)
+nix flake update
+
+# 2. Rebuild
+sudo nixos-rebuild switch --flake /etc/nixos#nix-pc
